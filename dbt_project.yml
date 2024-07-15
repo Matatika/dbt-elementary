@@ -1,4 +1,4 @@
-name: dbt-elementary
+name: dbtelementary
 version: "0.1.0"
 require-dbt-version: [">=1.0.0", "<2.0.0"]
 config-version: 2
@@ -15,7 +15,7 @@ macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 
 models:
-  dbt-elementary:
+  dbtelementary:
     +enabled: "{{ env_var('STORE_TEST_RESULTS', 'false') == 'true' }}"
     +meta:
       schema_name: "matatika_test_results"
