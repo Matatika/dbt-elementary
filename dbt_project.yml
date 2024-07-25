@@ -13,15 +13,3 @@ test-paths: ["tests"]
 seed-paths: ["data"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
-
-models:
-  dbtelementary:
-    +enabled: "{{ env_var('STORE_TEST_RESULTS', 'false') == 'true' }}"
-    +meta:
-      schema_name: "matatika_test_results"
-
-vars:
-  schema: "{{ env_var('DBT_TARGET_SCHEMA') }}"
-
-tests:
-  +schema: matatika_test_results
